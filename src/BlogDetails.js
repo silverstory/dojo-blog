@@ -1,4 +1,5 @@
 import { useParams, useHistory } from "react-router-dom";
+import Update from "./Update";
 import useFetch from "./useFecth";
 
 const BlogDetails = () => {
@@ -24,6 +25,9 @@ const BlogDetails = () => {
           <p>Written by { blog.author } </p>
           <div>{ blog.body }</div>
           <button  onClick={handleClick}>delete</button>
+
+          <Update blog={blog} />
+
         </article>
       )}
     </div>
